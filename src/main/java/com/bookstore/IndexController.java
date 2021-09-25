@@ -9,9 +9,26 @@ public class IndexController {
     public String index() {
         StringBuilder sb = new StringBuilder();
         sb.append("<!DOCTYPE html>"+
-        "<html>"+
-            "<body>"+
-                "<h1>Welcome to Bookstore Spring-boot API</h1>"+
+        "<html>"+        
+                "<body>" +
+            "<head>"+
+            "<meta name='viewport' content='width=device-width, initial-scale=1'>"+
+            "<style>"+
+            "body, html {"+
+              "height: 100%;"+
+              "margin: 0;"+
+            "}"+            
+            ".bg {"+             
+              "background-image: url('https://i.morioh.com/dd054f30db.png');"+              
+              "height:100%;"+
+              "background-position: center;"+
+              "background-repeat: no-repeat;"+
+              "background-size: cover;"+
+            "}"+
+            "</style>"+
+            "</head>"+
+                "<h1>Welcome to Bookstore Spring-boot API</h1>" +
+                "<div class='bg'>"+
                 "<ul>"+
                     "<li>Fetch all books: https://bookstore-springboot-backend.herokuapp.com/book/getAll</li>"+
                     "<li>Create book (GET): https://bookstore-springboot-backend.herokuapp.com/book/add {book}</li>"+
@@ -20,7 +37,8 @@ public class IndexController {
                     "<li>Delete book (DELETE): https://bookstore-springboot-backend.herokuapp.com/book/{id}</li>"+
                     "<li>Update book rating (PUT): https://bookstore-springboot-backend.herokuapp.com/book/rating/ {book} {id}</li>"+
                     "<li>Update book rating (PUT): https://bookstore-springboot-backend.herokuapp.com/book/status/ {book} {id}</li>"+
-                "</ul>"+
+                "</ul>" +
+                "</div>"+
             "</body>"+       
         "</html>");
         return sb.toString();
