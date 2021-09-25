@@ -22,8 +22,7 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=<SQL-Username>
 spring.datasource.password=<SQL-Password>
 ```
-
-### MySQL Demo Data Setup:
+### MySQL Demo Data Setup localhost:
 *In case of running the app on localhost, create bookstore and book locally and dump the demo data in*
 *Database name: bookstoredb*
 *Table name: books*
