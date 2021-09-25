@@ -11,7 +11,7 @@ cd bookstore
 mvn spring-boot:run
 ```
 
-### MySQL Localhost Configuration:
+### MySQL Database Configuration:
 *Database name: bookstoredb*
 *Update: application.properties in the resources directory with your SQL parameters*
 ```
@@ -22,7 +22,8 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=<SQL-Username>
 spring.datasource.password=<SQL-Password>
 ```
-### MySQL Demo Data Setup localhost:
+
+### MySQL Database on localhost:
 *In case of running the app on localhost, create bookstore and book locally and dump the demo data in*
 *Database name: bookstoredb*
 *Table name: books*
@@ -48,13 +49,4 @@ VALUES
 ('Joyce Farrell', '0', '3', 'https://images.thenile.io/r1000/9781337397070.jpg', '2018'),
 ('Nathan Clark', '1', '3', 'https://m.media-amazon.com/images/I/41N8dZQdldL.jpg', '2018'),
 ('Joakim Verona', '0', '3.5', 'https://m.media-amazon.com/images/I/51-lY0PtmnL.jpg', '2016');
-```
-
-### ERRATA: CORS policy: No 'Access-Control-Allow-Origin':
-*In case the CORS block requests to resources in local host*
-
-* Option 1 (Easy Fix): Add the proper annotation in the back-end for the mapping functions
-```
- @CrossOrigin(origins = "http://localhost:3000")
-
 ```
