@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/", maxAge = 3600)
 @RestController
 @RequestMapping("/book")
 public class BookController {
@@ -26,20 +27,20 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/add")
     public String add(@RequestBody Book book) {
         bookService.saveBook(book);
         return "New Book is added.";
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/getAll")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{id}")
     public ResponseEntity<Book> getBook(@PathVariable Integer id) {
         try {
@@ -50,7 +51,7 @@ public class BookController {
         }
     }
     
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/{id}")
     public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable Integer id) {
         try {
@@ -63,7 +64,7 @@ public class BookController {
         }
     }
     
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/rating/{id}")
     public ResponseEntity<Book> updateRating(@RequestBody Book book, @PathVariable Integer id) {
         try {
@@ -76,7 +77,7 @@ public class BookController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/getRating/{id}")
     public double getRating(@PathVariable Integer id) {
         try {
@@ -86,7 +87,7 @@ public class BookController {
         }
     }
     
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/status/{id}")
     public boolean status(@PathVariable Integer id) {
         try {
@@ -96,7 +97,7 @@ public class BookController {
         }
     }
     
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/status/{id}")
     public ResponseEntity<Book> changeStatus(@RequestBody Book book, @PathVariable Integer id) {
         try {
@@ -109,7 +110,7 @@ public class BookController {
         }
     }
     
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")//@CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Integer id) {
         bookService.delete(id);
