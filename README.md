@@ -1,18 +1,24 @@
 ## Bookstore Demo
 
-Spring Boot - React Demo app.
+Spring Boot Bookstore backend app.
+*Bookstore Spring Boot backend app is deployed to heroku. To deploy the app on localhost update the following code in BookController:*
+```
+change: @CrossOrigin(origins = "https://bookstore-react-frontend.herokuapp.com/")
+to:     @CrossOrigin(origins = "http://localhost:3000")
+```
 
 ### Backend - Spring Boot maven app:
 * Root directory: bookstore
 
-*To run the maven Spring Boot app go into root directory - bookstore:*
+*To run the maven Spring Boot app (on localhost) go into root directory - bookstore:*
 ```
 cd bookstore
 mvn spring-boot:run
 ```
 
 ### MySQL Database Configuration:
-*Database name: bookstoredb*
+*To configure Bookstore app connection with the mysql database (on localhost)*
+
 *Update: application.properties in the resources directory with your SQL parameters*
 ```
 spring.jpa.hibernate.ddl-auto=update
@@ -24,6 +30,7 @@ spring.datasource.password=<SQL-Password>
 ```
 
 ### MySQL Database Data dump:
+*To configure Bookstore app connection with the mysql database (on localhost)*
 *Creata Database: bookstoredb*
 *Table name: book*
 
