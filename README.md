@@ -23,7 +23,7 @@ spring.datasource.username=<SQL-Username>
 spring.datasource.password=<SQL-Password>
 ```
 
-### MySQL Database Data Dump:
+### MySQL Database Data dump:
 *Creata Database: bookstoredb*
 *Table name: book*
 
