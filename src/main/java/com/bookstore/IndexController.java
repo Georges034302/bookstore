@@ -38,7 +38,7 @@ public class IndexController {
                     "<li>Update book (PUT): https://bookstore-springboot-backend.herokuapp.com/book/{id}</li>"+
                     "<li>Delete book (DELETE): https://bookstore-springboot-backend.herokuapp.com/book/{id}</li>"+
                     "<li>Update book rating (PUT): https://bookstore-springboot-backend.herokuapp.com/book/rating/ {book} {id}</li>"+
-                    "<li>Update book rating (PUT): https://bookstore-springboot-backend.herokuapp.com/book/status/ {book} {id}</li>"+
+                    "<li>Update book status (PUT): https://bookstore-springboot-backend.herokuapp.com/book/status/ {book} {id}</li>"+
                 "</ul>" +
                 "</div>"+
             "</body>"+       

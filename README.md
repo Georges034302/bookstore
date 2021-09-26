@@ -17,16 +17,15 @@ mvn spring-boot:run
 ```
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
-spring.datasource.url=jdbc:mysql://${YOUR_HOSTNAME:localhost}:<SQL-PORT></SQL-PORT>/bookstoredb?serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://YOUR_HOSTNAME:SQL-PORT/DB-NAME?serverTimezone=UTC&reconnect=true
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=<SQL-Username>
 spring.datasource.password=<SQL-Password>
 ```
 
-### MySQL Database on localhost:
-*In case of running the app on localhost, create bookstore and book locally and dump the demo data in*
-*Database name: bookstoredb*
-*Table name: books*
+### MySQL Database Data Dump:
+*Creata Database: bookstoredb*
+*Table name: book*
 
 ```
 create database bookstoredb;
